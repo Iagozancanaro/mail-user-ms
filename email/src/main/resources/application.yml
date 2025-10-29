@@ -2,7 +2,7 @@ spring:
   application:
     name: email
   datasource:
-    url: jdbc:postgresql://localhost:5433/ms_mail_ms
+    url: jdbc:postgresql://localhost:5433/ms_email_ms
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
@@ -13,6 +13,12 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  rabbitmq:
+    addresses: amqps://seal.lmq.cloudamqp.com
+    username: nljzopxg
+    password: 9C3iItHh4OQ1MLyuOeEpDPHxQu9Ipp-l
+    virtual-host: nljzopxg
 
 server:
   port: 8080
